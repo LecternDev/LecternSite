@@ -1,0 +1,69 @@
+{
+  "changes": [
+    {
+      "entry_count": 3,
+      "protocol_id": 7,
+      "registry": "demo:widget",
+      "type": "registry.added"
+    },
+    {
+      "count": 2,
+      "first_id": 5,
+      "type": "registry.ids_shifted"
+    },
+    {
+      "block": "demo:lamp",
+      "state_count": 2,
+      "type": "block.added"
+    },
+    {
+      "direction": "clientbound",
+      "packet": "demo:ping",
+      "phase": "play",
+      "protocol_id": 9,
+      "type": "packet.added"
+    },
+    {
+      "count": 5,
+      "direction": "clientbound",
+      "first_id": 10,
+      "phase": "play",
+      "type": "packet.ids_shifted"
+    },
+    {
+      "command": "demo",
+      "executable": true,
+      "type": "command.executable_modified"
+    },
+    {
+      "count": 3,
+      "recipe": "demo:cake",
+      "type": "recipe.added"
+    }
+  ],
+  "from": {
+    "id": "1.5",
+    "kind": "release"
+  },
+  "future_key": [
+    1,
+    2
+  ],
+  "schema_version": 1,
+  "skipped": [
+    {
+      "domain": "commands",
+      "reason": "report_missing",
+      "side": "both"
+    },
+    {
+      "domain": "worldgen",
+      "reason": "unreadable",
+      "side": "to"
+    }
+  ],
+  "to": {
+    "id": "2.0",
+    "kind": "release"
+  }
+}

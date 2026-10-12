@@ -1,0 +1,22 @@
+{
+  "game": {
+    "build_time": "2025-02-01T08:50:00+00:00",
+    "id": "2.0-rc-1",
+    "pack_version": {
+      "data_major": 10,
+      "data_minor": 1,
+      "resource_major": 8,
+      "resource_minor": 0
+    },
+    "protocol_version": 1073741900,
+    "stable": false,
+    "world_version": 3000
+  },
+  "id": "2.0-rc-1",
+  "jar_sha1": "0000000000000000000000000000000000000003",
+  "kind": "release-candidate",
+  "release_base": null,
+  "release_time": "2025-02-01T09:00:00Z",
+  "schema_version": 1,
+  "step_base": "1.5"
+}

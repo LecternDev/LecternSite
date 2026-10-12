@@ -1,0 +1,13 @@
+{
+  "changes": [],
+  "from": {
+    "id": "2.0-rc-1",
+    "kind": "release-candidate"
+  },
+  "schema_version": 1,
+  "skipped": [],
+  "to": {
+    "id": "2.0",
+    "kind": "release"
+  }
+}

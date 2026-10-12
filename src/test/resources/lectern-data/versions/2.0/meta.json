@@ -1,0 +1,21 @@
+{
+  "future_key": true,
+  "game": {
+    "id": "2.0",
+    "pack_version": {
+      "data_major": 10,
+      "data_minor": 2,
+      "resource_major": 8,
+      "resource_minor": 1
+    },
+    "stable": true,
+    "world_version": 3001
+  },
+  "id": "2.0",
+  "jar_sha1": "0000000000000000000000000000000000000004",
+  "kind": "release",
+  "release_base": "1.5",
+  "release_time": "2025-02-10T09:00:00Z",
+  "schema_version": 1,
+  "step_base": "2.0-rc-1"
+}

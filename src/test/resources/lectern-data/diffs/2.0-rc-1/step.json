@@ -1,0 +1,83 @@
+{
+  "changes": [
+    {
+      "count": 4,
+      "first_id": 2,
+      "type": "registry.ids_shifted"
+    },
+    {
+      "entry": "demo:glossy",
+      "protocol_id": 1,
+      "registry": "demo:gadget",
+      "type": "registry.entry_added"
+    },
+    {
+      "entry": "demo:matte",
+      "protocol_id": 2,
+      "registry": "demo:gadget",
+      "type": "registry.entry_added"
+    },
+    {
+      "count": 12,
+      "first_id": 3,
+      "registry": "demo:gadget",
+      "type": "registry.entry_ids_shifted"
+    },
+    {
+      "block": "demo:lamp",
+      "state_count": 2,
+      "type": "block.added"
+    },
+    {
+      "block": "demo:chest",
+      "default": "north",
+      "property": "facing",
+      "type": "block.property_added",
+      "values": [
+        "north",
+        "south"
+      ]
+    },
+    {
+      "block": "demo:door",
+      "new_default": {
+        "open": "true"
+      },
+      "old_default": {
+        "open": "false"
+      },
+      "type": "block.default_state_modified"
+    },
+    {
+      "block_count": 3,
+      "first_id": 40,
+      "state_count": 9,
+      "type": "block.state_ids_shifted"
+    },
+    {
+      "kind": "literal",
+      "node_count": 3,
+      "path": [
+        "demo",
+        "spin"
+      ],
+      "type": "command.node_added"
+    }
+  ],
+  "from": {
+    "id": "1.5",
+    "kind": "release"
+  },
+  "schema_version": 1,
+  "skipped": [
+    {
+      "domain": "packets",
+      "reason": "report_missing",
+      "side": "from"
+    }
+  ],
+  "to": {
+    "id": "2.0-rc-1",
+    "kind": "release-candidate"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "changes": [
+    {
+      "entry": "demo:glossy",
+      "old_id": 1,
+      "new_id": 4,
+      "registry": "demo:gadget",
+      "type": "registry.entry_id_modified"
+    },
+    {
+      "block": "demo:chest",
+      "type": "block.property_values_removed",
+      "values": [
+        "south"
+      ],
+      "property": "facing"
+    },
+    {
+      "direction": "serverbound",
+      "packet": "demo:ping",
+      "phase": "play",
+      "protocol_id": 3,
+      "type": "packet.removed"
+    },
+    {
+      "new_permissions": {
+        "permission": {
+          "level": 2,
+          "type": "demo:level"
+        },
+        "type": "demo:required"
+      },
+      "old_permissions": null,
+      "path": [
+        "demo",
+        "spin"
+      ],
+      "type": "command.permissions_modified"
+    },
+    {
+      "new_properties": {
+        "max": 10,
+        "min": 0
+      },
+      "old_properties": null,
+      "path": [
+        "demo",
+        "spin",
+        "turns"
+      ],
+      "type": "command.properties_modified"
+    }
+  ],
+  "from": {
+    "id": "2.0",
+    "kind": "release"
+  },
+  "schema_version": 1,
+  "skipped": [],
+  "to": {
+    "id": "2.1-snapshot-1",
+    "kind": "snapshot"
+  }
+}

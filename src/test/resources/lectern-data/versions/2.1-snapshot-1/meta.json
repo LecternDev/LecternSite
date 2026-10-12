@@ -1,0 +1,9 @@
+{
+  "id": "2.1-snapshot-1",
+  "jar_sha1": "0000000000000000000000000000000000000005",
+  "kind": "snapshot",
+  "release_base": null,
+  "release_time": "2025-03-01T09:00:00Z",
+  "schema_version": 1,
+  "step_base": "2.0"
+}

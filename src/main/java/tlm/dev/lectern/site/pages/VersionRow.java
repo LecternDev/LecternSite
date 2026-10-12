@@ -1,16 +1,17 @@
 package tlm.dev.lectern.site.pages;
 
 import java.time.ZoneOffset;
-import tlm.dev.lectern.site.model.VersionSummary;
+import tlm.dev.lectern.site.model.VersionSheet;
 
-public record VersionRow(String id, String kind, boolean unstable, String releasedAt, String releasedOn) {
+public record VersionRow(String id, String href, String kind, boolean unstable, String releasedAt, String releasedOn) {
 
-    static VersionRow from(VersionSummary summary) {
+    static VersionRow from(String root, VersionSheet sheet) {
         return new VersionRow(
-                summary.id().value(),
-                summary.kind().label(),
-                summary.kind().unstable(),
-                summary.releaseTime().toString(),
-                summary.releaseTime().atZone(ZoneOffset.UTC).toLocalDate().toString());
+                sheet.id().value(),
+                SiteUrls.versionLink(root, sheet.id()),
+                sheet.kind().label(),
+                sheet.kind().unstable(),
+                sheet.releaseTime().toString(),
+                sheet.releaseTime().atZone(ZoneOffset.UTC).toLocalDate().toString());
     }
 }

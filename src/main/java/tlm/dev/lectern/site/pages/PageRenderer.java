@@ -3,13 +3,13 @@ package tlm.dev.lectern.site.pages;
 import gg.jte.ContentType;
 import gg.jte.TemplateEngine;
 import gg.jte.output.StringOutput;
-import java.util.List;
 import java.util.Map;
-import tlm.dev.lectern.site.model.VersionSummary;
 
 public final class PageRenderer {
 
-    private static final String VERSION_LIST_TEMPLATE = "versions.jte";
+    private static final String VERSION_LIST_TEMPLATE = "versionList.jte";
+    private static final String VERSION_PAGE_TEMPLATE = "versionPage.jte";
+    private static final String VIEW = "view";
 
     private final TemplateEngine engine;
 
@@ -21,13 +21,17 @@ public final class PageRenderer {
         return new PageRenderer(TemplateEngine.createPrecompiled(ContentType.Html));
     }
 
-    public String versionList(List<VersionSummary> versions) {
-        List<VersionRow> rows = versions.stream()
-                .sorted(VersionSummary.NEWEST_FIRST)
-                .map(VersionRow::from)
-                .toList();
+    public String versionList(VersionListView view) {
+        return render(VERSION_LIST_TEMPLATE, view);
+    }
+
+    public String versionPage(VersionPageView view) {
+        return render(VERSION_PAGE_TEMPLATE, view);
+    }
+
+    private String render(String template, Object view) {
         StringOutput output = new StringOutput();
-        engine.render(VERSION_LIST_TEMPLATE, Map.<String, Object>of("rows", rows), output);
+        engine.render(template, Map.<String, Object>of(VIEW, view), output);
         return canonical(output.toString());
     }
 
