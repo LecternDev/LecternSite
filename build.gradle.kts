@@ -1,5 +1,8 @@
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+
 plugins {
     id("java")
+    application
     alias(libs.plugins.jte)
 }
 
@@ -12,11 +15,16 @@ java {
     }
 }
 
+application {
+    mainClass = "tlm.dev.lectern.site.Main"
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    implementation(libs.jackson.core)
     implementation(libs.jte)
 
     testImplementation(platform(libs.junit.bom))
@@ -36,4 +44,8 @@ tasks.withType<JavaCompile>().configureEach {
 
 tasks.test {
     useJUnitPlatform()
+    testLogging {
+        events("failed", "skipped")
+        exceptionFormat = TestExceptionFormat.FULL
+    }
 }
